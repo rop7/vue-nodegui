@@ -33,8 +33,6 @@ exports.compilerOptions = {
                 case 'QLineEdit':
                 case 'QInput':
                 case 'QText':
-                case 'QCheck':
-                case 'vn-checkbox':
                     directiveToUse = V_MODEL_TEXT;
                     break;
                 case 'vn-slider':
@@ -47,9 +45,9 @@ exports.compilerOptions = {
                 case 'vn-combobox':
                     directiveToUse = V_MODEL_COMBOBOX;
                     break;
-                    // case 'QCheck':
-                    // case 'vn-checkbox':
-                    //   directiveToUse = V_MODEL_BOOLEAN;
+                case 'QCheck':
+                case 'vn-checkbox':
+                    directiveToUse = V_MODEL_BOOLEAN;
                     break;
                 case 'QList':
                     directiveToUse = V_MODEL_ARRAY;

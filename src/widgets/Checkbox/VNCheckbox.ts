@@ -53,6 +53,7 @@ export const CheckboxPropsSetters: PropSetters<VNCheckbox, CheckboxProps> = {
 
 /** @internal */
 export class VNCheckbox extends QCheckBox implements VNWidget<CheckboxProps> {
+  
   insertChild() {
     throw new Error('Cannot add child to checkboxes');
   }
