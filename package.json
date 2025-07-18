@@ -1,10 +1,13 @@
 {
-  "name": "@nodegui/vue-nodegui",
+  "name": "@rop7/vue-nodegui",
   "version": "0.0.5",
   "description": "library to render native desktop applications using vue js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext ts .",
@@ -14,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodegui/vue-nodegui.git"
+    "url": "git+https://github.com/rop7/vue-nodegui.git"
   },
   "keywords": [
     "vue",
@@ -22,12 +25,12 @@
     "desktop",
     "applications"
   ],
-  "author": "Shubham Zanwar <zanwar.shubham@gmail.com>",
+  "author": "rop7 <rop7@ropsoft.cloud>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nodegui/vue-nodegui/issues"
+    "url": "https://github.com/rop7/vue-nodegui/issues"
   },
-  "homepage": "https://github.com/nodegui/vue-nodegui#readme",
+  "homepage": "https://github.com/rop7/vue-nodegui#readme",
   "dependencies": {
     "@nodegui/nodegui": "^0.25.0",
     "@vue/compiler-core": "^3.0.1",
