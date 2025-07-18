@@ -33,7 +33,7 @@ exports.compilerOptions = {
                 case 'QLineEdit':
                 case 'QInput':
                 case 'QText':
-                // case 'QCheck':
+                case 'QCheck':
                 case 'vn-checkbox':
                     directiveToUse = V_MODEL_TEXT;
                     break;
