@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VNCheckbox = exports.CheckboxPropsSetters = void 0;
 const nodegui_1 = require("@nodegui/nodegui");
 const VNAbstractButton_1 = require("../AbstractButton/VNAbstractButton");
-exports.CheckboxPropsSetters = Object.assign(Object.assign({}, VNAbstractButton_1.abstractButtonPropSetters), { checked: (widget, _, nextValue) => {
+exports.CheckboxPropsSetters = Object.assign(Object.assign({}, VNAbstractButton_1.abstractButtonPropSetters), { value: (widget, _, nextValue) => {
         widget.setChecked(nextValue);
     } });
 /** @internal */

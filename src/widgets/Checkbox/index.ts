@@ -3,7 +3,7 @@ import { WidgetConfig } from '../config';
 
 class CheckboxConfig implements WidgetConfig<CheckboxProps> {
     parentNode: any;
-
+  
     createElement() {
       return new VNCheckbox();
     }

@@ -41,12 +41,12 @@ export interface CheckboxProps extends AbstractButtonProps {
   /**
    * Sets whether the Checkbox border is raised. [QPushCheckbox: setFlat](https://docs.nodegui.org/docs/api/QPushCheckbox#Checkboxsetflatisflat)
    */
-  checked?: boolean;
+  value?: boolean;
 }
 
 export const CheckboxPropsSetters: PropSetters<VNCheckbox, CheckboxProps> = {
   ...abstractButtonPropSetters,
-  checked: (widget: VNCheckbox, _, nextValue: boolean) => {
+  value: (widget: VNCheckbox, _, nextValue: boolean) => {
     widget.setChecked(nextValue);
   },
 };
