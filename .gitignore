@@ -19,7 +19,7 @@ thumb
 sketch
 
 ## ignore the dist folder
-dist
+#dist
 
 ## ignore the demo build
 demo-dist

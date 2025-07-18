@@ -8,6 +8,7 @@ const V_MODEL_COMBOBOX = Symbol('vModelComboBox');
 const V_MODEL_ARRAY = Symbol('vModelArray')
 const V_MODEL_OBJECT = Symbol('vModelObject')
 const V_MODEL_BOOLEAN = Symbol('vModelBoolean')
+const V_MODEL_GENERIC = Symbol('vModelGeneric')
 
 registerRuntimeHelpers({
   [V_MODEL_TEXT]: 'vModelText',
@@ -16,7 +17,8 @@ registerRuntimeHelpers({
   [V_MODEL_COMBOBOX]: 'vModelComboBox',
   [V_MODEL_ARRAY]: 'vModelArray',
   [V_MODEL_OBJECT]: 'vModelObject',
-  [V_MODEL_BOOLEAN]: 'vModelBoolean'
+  [V_MODEL_BOOLEAN]: 'vModelBoolean',
+  [V_MODEL_GENERIC]: 'vModelGeneric'
 });
 
 type CompilerOptions = {
@@ -57,6 +59,7 @@ export const compilerOptions: CompilerOptions = {
           directiveToUse = V_MODEL_COMBOBOX;
           break;
         case 'QCheck':
+        case 'vn-checkbox':
           directiveToUse = V_MODEL_BOOLEAN;
           break;
         case 'QList':
@@ -68,7 +71,8 @@ export const compilerOptions: CompilerOptions = {
           directiveToUse = V_MODEL_OBJECT;
           break;
         default:
-          throw new Error(`cannot use v-model on tag: ${tag}`);
+          directiveToUse = V_MODEL_GENERIC;
+          break;
       }
 
       baseResult.needRuntime = context.helper(directiveToUse as symbol);
